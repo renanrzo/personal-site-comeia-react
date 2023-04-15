@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #FFD124;
+}
+
+.button {
+  border: 0;
+  color: #0093AB;
+  /* padding: 25px; */
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #FFD124;
+  background-color: #006778;
+}
+
