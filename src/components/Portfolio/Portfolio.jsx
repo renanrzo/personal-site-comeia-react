@@ -15,8 +15,8 @@ export function Portfolio() {
                 (item, index) => <PortfolioItem
                                   key={index} 
                                   link={item.link} 
-                                  image={item.image + (index + 1)}
-                                  title={item.title + (index + 1)}
+                                  image={item.image}
+                                  title={item.title}
                                 />
 
                 )}
