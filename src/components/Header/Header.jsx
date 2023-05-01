@@ -1,13 +1,15 @@
 import  '../Header/Header.css';
 
-import imagesAndre from '../../assets/eu.jpg'
 
-export function Header() {
+export function Header(props) {
+
+    const { nome, cargo, foto } = props.informacoes; 
+    
     return (
       <header>
-          <img src={imagesAndre}/>
-          <h1>André Renan</h1>
-          <h3>Desenvolvedor Jr.</h3>
+          <img src={foto} alt='Foto do rosto de André'/>
+          <h1 id="nome-perfil">{nome}</h1>
+          <h3 id="eventoSubtitulo">{cargo}</h3>
       </header>
   )
 }

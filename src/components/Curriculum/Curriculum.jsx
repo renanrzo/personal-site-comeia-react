@@ -1,7 +1,13 @@
 import  '../Curriculum/Curriculum.css';
 import data from './Curriculum.json';
 
-export function Curriculum() {
+export function Curriculum(props) {
+    const { resumo, experienciaAcademica, experienciaProfissional } = props.curriculo;
+
+    if (!resumo || !experienciaAcademica || !experienciaProfissional) {
+        return <p>Carregando...</p>
+    }
+
     return (
         <>
             <section>
