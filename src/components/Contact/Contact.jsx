@@ -15,7 +15,7 @@ export function Contact() {
 
         const text = `Nome: ${name}\nE-mail: ${email}\nTelefone: ${phone} \Mensagem: ${message}`;
 
-        const whatsNumber = "5581991165163";
+        const whatsNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
         const linkWhatsApp = `https://wa.me/${whatsNumber}?text=${encodeURIComponent(text)}`;
 
