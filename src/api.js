@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://json-server-h9f5.onrender.com',
+    baseURL: 'https://site-pessoal-api-fizg.onrender.com/api',
 });
 
 export default api;
