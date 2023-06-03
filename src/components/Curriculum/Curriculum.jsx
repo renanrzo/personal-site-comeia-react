@@ -1,5 +1,5 @@
 import  '../Curriculum/Curriculum.css';
-import data from './Curriculum.json';
+// import data from './Curriculum.json';
 
 export function Curriculum(props) {
     const { resumo, experienciaAcademica, experienciaProfissional } = props.curriculo;
