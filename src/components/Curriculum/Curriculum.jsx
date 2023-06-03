@@ -1,41 +1,63 @@
-import  '../Curriculum/Curriculum.css';
-// import data from './Curriculum.json';
+import "../Curriculum/Curriculum.css";
 
 export function Curriculum(props) {
-    const { resumo, experienciaAcademica, experienciaProfissional } = props.curriculo;
+   const { resumo, experienciaAcademica, experienciaProfissional } = props.curriculo;
 
-    if (!resumo || !experienciaAcademica || !experienciaProfissional) {
-        return <p>Carregando...</p>
-    }
-
-    return (
-        <>
+   if (!resumo || !experienciaAcademica || !experienciaProfissional) {
+      return (
+         <>
             <section>
-        <h2>Resumo</h2>
-        <p>{data.summary}</p>
-    </section>
+               <h2>Resumo</h2>
+               <p>Aguardando o envio do resumo...</p>
+            </section>
 
-    <section>
-        <h2>Acadêmico</h2>
-        <ul>
-            {data.academicExperience.map((item, index) => (
-                <li key={index}>
-                    <b>({item.dataBegin} - {item.dataEnd})</b> {item.courseTitle}
-                </li>
-            ))}
-        </ul>
-    </section>
+            <section>
+               <h2>Acadêmico</h2>
+               <p>Aguardando o envio das experiências acadêmicas...</p>
+            </section>
 
-    <section>
-        <h2>Profissional</h2>
-        <ul>
-            {data.professionalExperience.map((item, index) => (
-                <li key={index}>
-                    <b>({item.dataBegin} - {item.dataEnd})</b> {item.professionalTitle}
-                </li>
-            ))}
-        </ul>
-    </section>
-    </>
-    )
+            <section>
+               <h2>Profissional</h2>
+               <p>Aguardando o envio das experiências profissionais...</p>
+            </section>
+         </>
+      );
+   }
+
+   return (
+      <>
+         <section>
+            <h2>Resumo</h2>
+            <p>{resumo}</p>
+         </section>
+
+         <section>
+            <h2>Acadêmico</h2>
+            <ul>
+               {experienciaAcademica.map((item, index) => (
+                  <li key={index}>
+                     <b>
+                        ({item.anoInicio} - {item.anoFim})
+                     </b>{" "}
+                     {item.titulo}
+                  </li>
+               ))}
+            </ul>
+         </section>
+
+         <section>
+            <h2>Profissional</h2>
+            <ul>
+               {experienciaProfissional.map((item, index) => (
+                  <li key={index}>
+                     <b>
+                        ({item.anoInicio} - {item.anoFim})
+                     </b>{" "}
+                     {item.titulo}
+                  </li>
+               ))}
+            </ul>
+         </section>
+      </>
+   );
 }
